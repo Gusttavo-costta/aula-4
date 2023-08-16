@@ -9,7 +9,18 @@ function mudacorA(){
     CorInput.style.backgroundColor = "yellow";
 }
 
+
 function mudacorB(){
-    CorInput.style.backgroundColor = "green";
-}
+    if (CorInput.value.length == 0){
+        CorInput.style.backgroundColor = "white"
+    } else {
+        if (CorInput.value.length >= 3){
+            CorInput.style.background = "green"
+        } else {
+            CorInput.style.background = "red"
+            var resposta = document.getElementById("resposta");
+            resposta.innerText = "O numero de caracteres não é suficiente!";
+        }
+    }
     
+}
